@@ -100,7 +100,7 @@
 				cell.attrs.id = match[2]
 			} else if (match[1] === ".") {
 				classes.push(match[2])
-			} else if (match[3][0] === "[") {
+			} else if (match[3].charAt(0) === "[") {
 				var attrValue = match[6]
 				if (attrValue) attrValue = attrValue.replace(/\\(["'])/g, "$1")
 				cell.attrs[match[4]] = attrValue || true
